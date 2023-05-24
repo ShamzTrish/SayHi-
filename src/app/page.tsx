@@ -1,15 +1,20 @@
-import Button from "@/components/ui/Button"
+'use client'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+import { FC } from 'react'
 
+interface pageProps {
 
-
-const Home = async () => {
-  
-
-
-  return <div>
-    <h1 className='text-red-500'>Hello World</h1>
-        <Button buttonVariant="ghost"/>
-    </div>
 }
 
-export default Home
+const Page: FC<pageProps> = ({ }) => {
+  const router = useRouter()
+
+  useEffect(() => {
+    router.replace('/login')
+  }, [router])
+
+  return null
+}
+
+export default Page
